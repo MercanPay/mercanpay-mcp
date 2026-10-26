@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.MercanPay/mercanpay-mcp",
+  "title": "MercanPay",
+  "description": "Create USDT (TRC20) and TRX crypto invoices and payment links from any AI assistant.",
+  "version": "1.0.0",
+  "websiteUrl": "https://mercanpay.com/en/integrations/mcp-server",
+  "repository": { "url": "https://github.com/MercanPay/mercanpay-mcp", "source": "github" },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "mercanpay-mcp",
+      "version": "1.0.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "MERCANPAY_API_KEY", "description": "MercanPay API key (mp_… or mp_test_…) with the invoices and read scopes", "isRequired": true, "isSecret": true },
+        { "name": "MERCANPAY_BASE_URL", "description": "API base URL", "isRequired": false, "default": "https://mercanpay.com" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mercanpay-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for MercanPay: let Claude, Cursor and other AI assistants create USDT / TRX (TRC20) invoices and payment links",
+  "license": "MIT",
+  "author": "MercanPay <support@mercanpay.com>",
+  "homepage": "https://mercanpay.com/en/integrations/mcp-server",
+  "repository": { "type": "git", "url": "git+https://github.com/MercanPay/mercanpay-mcp.git" },
+  "bugs": { "url": "https://github.com/MercanPay/mercanpay-mcp/issues" },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "claude", "cursor", "ai-agent", "payments", "crypto-payments", "usdt", "trc20", "tron", "trx", "payment-gateway", "mercanpay"],
+  "type": "module",
+  "bin": { "mercanpay-mcp": "dist/index.js" },
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "files": ["dist", "README.md", "LICENSE", "server.json"],
+  "engines": { "node": ">=18" },
+  "mcpName": "io.github.MercanPay/mercanpay-mcp",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
